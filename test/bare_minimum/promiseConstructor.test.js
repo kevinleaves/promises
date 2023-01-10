@@ -35,8 +35,8 @@ describe('Promise constructor', function() {
       pluckFirstLineFromFileAsync(__dirname + '/../files/nonexistent_file.txt')
         .catch(function(err) {
           expect(err.code).to.equal('ENOENT');
-          done();
         });
+        done();
     });
 
   });
@@ -89,8 +89,8 @@ describe('Promise constructor', function() {
           expect(err.message).to.satisfy((msg) => {
             return (msg.includes('Invalid URI') || msg.includes('ECONNREFUSED'));
           }, 'expected the error message to explain that the URL is invalid');
-          done();
         });
+        done()
     });
 
     // Restore HTTP requests to their normal unmocked behavior
