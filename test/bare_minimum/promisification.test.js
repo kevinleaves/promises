@@ -102,7 +102,7 @@ describe('Promisification', function() {
           expect(err.code).to.equal('ENOENT');
           done();
         });
-    });
+      });
 
   });
 
