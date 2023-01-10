@@ -24,7 +24,6 @@ var pluckFirstLineFromFileAsync = function(filePath) {
     return firstLine
   })
   .catch((err) => {
-    console.log(err)
     return err
   })
 
@@ -37,7 +36,6 @@ var getStatusCodeAsync = function(url) {
       if (err) {
         reject(err)
       } else {
-        console.log(response.statusCode, 'response')
         resolve(response.statusCode)
       }
     })
@@ -46,7 +44,6 @@ var getStatusCodeAsync = function(url) {
     return statusCode
   })
   .catch((err) => {
-    console.log(err)
     return err
   })
 };
